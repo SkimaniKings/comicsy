@@ -5,3 +5,9 @@ from comics import app
 @app.route('/home')
 def home():
     return render_template('home.html')
+
+
+@app.route('/')
+@app.route('/about')
+def about():
+    return render_template('about.html')
