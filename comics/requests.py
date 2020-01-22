@@ -10,6 +10,6 @@ def get_superhero():
     response_list = requests.get(url).json()
     superheroes_list = []
     for sups in response_list: 
-        sup = Superhero(sups.get("image"), sups.get("biography"),sups.get("powerstats"),sups.get("connections"))
+        sup = Superhero(sups.get("images"), sups.get("biography"),sups.get("powerstats"),sups.get("connections"))
         superheroes_list.append(sup)
     return superheroes_list
