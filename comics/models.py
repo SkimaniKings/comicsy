@@ -6,5 +6,5 @@ class Superhero:
         self.images = images
         self.biography = biography
         self.powerstats = powerstats
-        self.connection = connections
+        self.connections=connections
         
