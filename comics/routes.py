@@ -10,8 +10,10 @@ from comics import requests
 @app.route('/')
 @app.route('/home')
 def home():
+     heroes = requests.get_superhero()
+     
+     return render_template('home.html',heroes=heroes)
 
-    return render_template('home.html')
 
 
 @app.route("/login", methods=['GET', 'POST'])
@@ -25,6 +27,4 @@ def login():
             flash('Login Unsuccessful. Please check username and password', 'danger')
     return render_template('login.html', title='Login', form=form)
      
-     heroes = requests.get_superhero()
-     print("Hello world",heroes)
-     return render_template('home.html',heroes=heroes)
+   
