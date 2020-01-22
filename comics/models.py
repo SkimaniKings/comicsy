@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 from datetime import datetime
 from comics import app, db
 
@@ -26,15 +25,3 @@ class Post(db.Model):
 
     def __repr__(self):
         return f"Post('{self.title}', '{self.date_posted}')"
-=======
-
-
-
-class Superhero:
-    def __init__ (self,images,biography,powerstats,connections):
-        self.images = images
-        self.biography = biography
-        self.powerstats = powerstats
-        self.connections=connections
-        
->>>>>>> bec7e2a786403b83a749abbb1fb7430c3cf5c074

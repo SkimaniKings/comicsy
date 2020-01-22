@@ -1,27 +1,9 @@
-<<<<<<< HEAD
 .drac {
     background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url("https://bit.ly/2RJf5qw");
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
 }
-=======
-body {
-    /* background:linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(http://www.cheatsheet.com/wp-content/uploads/2015/11/Justice-League.jpg) no-repeat center center/cover;
-    height:100vh; */
-}
-nav {
-  background: purple;
-}
 
-nav a {
-  color: #faff70;
-}
-#heada {
-  color: purple;
-}
 
-nav a:hover {
-  color: #fff;
-}
->>>>>>> bec7e2a786403b83a749abbb1fb7430c3cf5c074
+
