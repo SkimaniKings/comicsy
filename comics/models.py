@@ -2,8 +2,8 @@
 
 
 class Superhero:
-    def __init__ (self,image,biography,powerstats,connections):
-        self.image = image
+    def __init__ (self,images,biography,powerstats,connections):
+        self.images = images
         self.biography = biography
         self.powerstats = powerstats
         self.connection = connections

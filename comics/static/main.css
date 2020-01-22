@@ -1,6 +1,6 @@
 body {
-    background:linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(http://www.cheatsheet.com/wp-content/uploads/2015/11/Justice-League.jpg) no-repeat center center/cover;
-    height:100vh;
+    /* background:linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(http://www.cheatsheet.com/wp-content/uploads/2015/11/Justice-League.jpg) no-repeat center center/cover; */
+    /* height:100vh; */
 }
 nav {
   background: purple;

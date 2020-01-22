@@ -1,4 +1,15 @@
 {%extends 'base.html' %}
-{%block content%}
-<!-- <h1>Hello World</h1> -->
+
+{%block content %}
+
+
+    {% for hero in heroes%}
+    <p>{{hero.images}}</p>
+    <p>{{hero.biography}}</p>
+    <p>{{hero.powerstats}}</p>
+    <p>{{hero.connections}}</p>
+       
+    {% endfor %}
+
+
 {%endblock%}
