@@ -1,4 +1,27 @@
 {%extends 'base.html' %}
-{%block content%}
-<h1>Hello World</h1>
+
+{%block content %}
+<div class="container" style="margin-top: -5px;">
+
+
+    {% for hero in heroes%}
+
+   
+    <div class="card m-4" style="width: 30rem;">
+        <img src="{{hero.images.md}}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Full Names:{{hero.biography.fullName}}</h5>
+            <p class="card-text">Superhero Name:{{hero.biography.aliases}}</p>
+            <a href="#" class="btn btn-primary">Read More</a>
+        </div>
+    </div>
+
+    <!-- <p>{{hero.powerstats}}</p>
+    <p>{{hero.connections}}</p> -->
+
+    {% endfor %}
+
+</div>
+
+
 {%endblock%}

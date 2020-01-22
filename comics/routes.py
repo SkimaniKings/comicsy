@@ -9,6 +9,10 @@ from comics.models import User
 @app.route('/home')
 def home():
     return render_template('home.html')
+     heroes = requests.get_superhero()
+     
+     return render_template('home.html',heroes=heroes)
+
 
 
 
@@ -23,5 +27,5 @@ def register():
         db.session.add(user)
         db.session.commit()
         flash('Your account has been created! You are now able to log in', 'success')
-        return redirect(url_for('home'))
+        return redirect(url_for('login'))
     return render_template('register.html', title='Register', form=form)
