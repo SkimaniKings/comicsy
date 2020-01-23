@@ -1,6 +1,3 @@
-# from flask import render_template, url_for, flash, redirect, request
-# from comics import app
-# from comics.forms import LoginForm,RegistrationForm
 
 
 import os
@@ -8,7 +5,7 @@ import secrets
 from flask import render_template, url_for, flash, redirect,request,abort
 from comics import app, db, bcrypt
 from comics.models import User
-from comics.forms import RegistrationForm, LoginForm
+from comics.forms import RegistrationForm, LoginForm,UpdateForm
 from flask_login import login_user,current_user,logout_user,login_required
 from comics import requests
 
@@ -20,9 +17,6 @@ def home():
      heroes = requests.get_superhero()
      
      return render_template('home.html',heroes=heroes)
-
-
-
 
 
 @app.route('/register', methods=['GET', 'POST'])
@@ -61,3 +55,18 @@ def login():
             flash('Login unsuccessful. please confirm email and password.','danger')
     
     return render_template('login.html', form=form)
+
+@app.route("/profile", methods=['GET', 'POST'])  
+def profile():
+    form = UpdateForm()
+    if form.validate_on_submit():
+   
+        current_user.username= form.username.data
+        current_user.email= form.email.data
+        db.session.commit()
+        flash("Your account has been updated!",'success')
+        return redirect(url_for('profile'))
+ 
+  
+    return render_template('profile.html', title='Profile' ,form=form)
+     
