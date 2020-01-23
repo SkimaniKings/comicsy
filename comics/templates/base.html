@@ -41,14 +41,16 @@
                     <!-- Navbar Right Side -->
                     <div class="navbar-nav">
 
-
+                        {% if current_user.is_authenticated %}
                         <a class="nav-item nav-link" href="/#">Profile</a>
-                        <a class="nav-item nav-link" href="/#">Sign Out</a>
+                        <a class="nav-item nav-link" href="/logout">Sign Out</a>
+                        <a class="nav-item nav-link" href="/#">Contact us</a>
 
-
+                        {%else%}
                         <a class="nav-item nav-link" href="/login">Sign in</a>
                         <a class="nav-item nav-link" href="/register">Sign Up</a>
-                        <a class="nav-item nav-link" href="/#">Contact us</a>
+                        {%endif%}
+                       
 
                     </div>
                 </div>

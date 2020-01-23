@@ -40,6 +40,10 @@ def register():
             f'You have successfully created an account for {form.username.data}! You can now log in to your account','success')
         return redirect(url_for('login'))
     return render_template('register.html', form=form)
+@app.route('/logout')
+def logout():
+    logout_user()
+    return redirect(url_for('home'))
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
