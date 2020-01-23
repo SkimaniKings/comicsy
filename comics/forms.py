@@ -1,6 +1,7 @@
 from flask_wtf import FlaskForm
 from wtforms import StringField, SelectField,PasswordField, SubmitField, BooleanField,TextAreaField
 from wtforms.validators import DataRequired, Length, Email, EqualTo, ValidationError
+from comics.models import User
 
 
 
