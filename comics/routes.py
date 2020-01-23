@@ -56,4 +56,9 @@ def login():
 def articles():
   
     return render_template('articles.html', title='Profile' )
+
+@app.route("/contacts", methods=['GET', 'POST'])  
+def contacts():
+  
+    return render_template('contacts.html', title='Profile' )
      
