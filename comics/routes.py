@@ -1,35 +1,19 @@
 
-
 import os
 import secrets
 from flask import render_template, url_for, flash, redirect,request,abort
 from comics import app, db, bcrypt
 from comics.models import User
-from comics.forms import RegistrationForm, LoginForm,UpdateForm,PostForm
+from comics.forms import RegistrationForm, LoginForm
 from flask_login import login_user,current_user,logout_user,login_required
 from comics import requests
-
-@app.route('/post/new', methods=['GET', 'POST'])
-@login_required
-def new_post():
-     form = PostForm()
-     if form.validate_on_submit():
-         post=Post(title=form.title.data,content=form.content.data, author=current_user)
-         db.session.add(post)
-         db.session.commit()
-         
-         flash("Your Post has been created",'success')
-         return redirect(url_for('home'))
-     return render_template('post.html' ,form=form, legend='New Post')
 
 @app.route('/')
 @app.route('/home')
 def home():
      heroes = requests.get_superhero()
-     
      return render_template('home.html',heroes=heroes)
-
-
+ 
 @app.route('/register', methods=['GET', 'POST'])
 def register():
     if current_user.is_authenticated:
@@ -45,6 +29,7 @@ def register():
             f'You have successfully created an account for {form.username.data}! You can now log in to your account','success')
         return redirect(url_for('login'))
     return render_template('register.html', form=form)
+
 @app.route('/logout')
 def logout():
     logout_user()
