@@ -5,11 +5,22 @@ import secrets
 from flask import render_template, url_for, flash, redirect,request,abort
 from comics import app, db, bcrypt
 from comics.models import User
-from comics.forms import RegistrationForm, LoginForm,UpdateForm
+from comics.forms import RegistrationForm, LoginForm,UpdateForm,PostForm
 from flask_login import login_user,current_user,logout_user,login_required
 from comics import requests
 
-
+@app.route('/post/new', methods=['GET', 'POST'])
+@login_required
+def new_post():
+     form = PostForm()
+     if form.validate_on_submit():
+         post=Post(title=form.title.data,content=form.content.data, author=current_user)
+         db.session.add(post)
+         db.session.commit()
+         
+         flash("Your Post has been created",'success')
+         return redirect(url_for('home'))
+     return render_template('post.html' ,form=form, legend='New Post')
 
 @app.route('/')
 @app.route('/home')
