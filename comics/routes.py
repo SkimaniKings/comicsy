@@ -52,17 +52,8 @@ def login():
     
     return render_template('login.html', form=form)
 
-@app.route("/profile", methods=['GET', 'POST'])  
-def profile():
-    form = UpdateForm()
-    if form.validate_on_submit():
-   
-        current_user.username= form.username.data
-        current_user.email= form.email.data
-        db.session.commit()
-        flash("Your account has been updated!",'success')
-        return redirect(url_for('profile'))
- 
+@app.route("/articles", methods=['GET', 'POST'])  
+def articles():
   
-    return render_template('profile.html', title='Profile' ,form=form)
+    return render_template('articles.html', title='Profile' )
      
