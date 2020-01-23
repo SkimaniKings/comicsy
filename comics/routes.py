@@ -1,9 +1,6 @@
 from flask import render_template, url_for, flash, redirect, request
 from comics import app
-
 from comics.forms import LoginForm
-
-
 from comics import requests
 
 
