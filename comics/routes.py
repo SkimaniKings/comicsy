@@ -4,6 +4,9 @@ from comics.forms import RegistrationForm
 from comics.models import User, Post
 
 
+from comics import app
+from comics.forms import LoginForm
+from comics import requests
 
 
 @app.route('/')
