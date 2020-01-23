@@ -34,8 +34,18 @@
           </button>
         </div>
         <div class="modal-body">
-          <h3>{{hero.biography.aliases}} Powerstats</h3>
-          <p>{{hero.powerstats.intelligence}}</p>
+
+          <h3>{{hero.biography.aliases}} <br>Powerstats</h3>
+          <p>Has a strength of {{hero.powerstats.strength}}</p>
+          <p>An intelligence of {{hero.powerstats.intelligence}}</p>
+          <p>Can move at a speed of {{hero.powerstats.speed}}</p>
+          <p>Combatt abilities of {{hero.powerstats.combat}}</p> <br>
+          <h3>Biography</h3>
+          <p>Was born in {{hero.biography.placeOfBirth}}</p>
+          <p>First appearance was in  {{hero.biography.firstAppearance}}</p><br>
+          <h3>Connections</h3>
+          <p>Known relatives are {{hero.connections.relatives}}</p>
+          <p>Group affliation he has worked with {{hero.connections.groupAffiliation}}</p>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
