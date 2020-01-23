@@ -3,52 +3,52 @@
 {%block content %}
 <div style="margin-top: -5px;">
 
-    {% for hero in heroes%}
-        <div class="card m-4 d-flex" style="width: 20rem; ">
-            <img src="{{hero.images.md}}" class="card-img-top img-fluid" alt="..." width="100%">
-            <div class="card-body">
-                <h5 class="card-title">Full Names:{{hero.biography.fullName}}</h5>
-                <p class="card-text">Superhero Name:{{hero.biography.aliases}}</p>
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
-                    Read more
-                  </button>
-                  
-            </div>
-        </div>
 
-        <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="exampleModalLongTitle">know more about your hero!</h5>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                    </div>
-                    <div class="modal-body">
-                    <!-- <img src="{{hero.images.md}}" class="card-img-top img-fluid" alt="..." width="25px"> -->
-                      <h3>{{hero.biography.aliases}} <br>Powerstats</h3>
-                      <p>Has a strength of {{hero.powerstats.strength}}</p>
-                      <p>An intelligence of {{hero.powerstats.intelligence}}</p>
-                      <p>Can move at a speed of {{hero.powerstats.speed}}</p>
-                      <p>Combatt abilities of {{hero.powerstats.combat}}</p> <br>
-                      <h3>Biography</h3>
-                      <p>Was born in {{hero.biography.placeOfBirth}}</p>
-                      <p>First appearance was in  {{hero.biography.firstAppearance}}</p><br>
-                      <h3>Connections</h3>
-                      <p>Known relatives are {{hero.connections.relatives}}</p>
-                      <p>Group affliation he has worked with {{hero.connections.groupAffiliation}}</p>
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-</div>
+  {% for hero in heroes%}
 
-  
-
-
+  <div class="card m-4 " style="width: 20rem; ">
+    <img src="{{hero.images.md}}" class="card-img-top img-fluid" alt="..." width="100%">
+    <div class="card-body">
+      <h5 class="card-title">Full Names:{{hero.biography.fullName}}</h5>
+      <p class="card-text">Superhero Name:{{hero.biography.aliases}}</p>
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+        Read more
+      </button>
+    </div>
+  </div>
 {% endfor %}
+{%for hero in heroes%}
+<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+aria-hidden="true">
+<div class="modal-dialog" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="exampleModalLongTitle">know more about your hero!</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <!-- <img src="{{hero.images.md}}" class="card-img-top img-fluid" alt="..." width="25px"> -->
+      <h3>{{hero.biography.aliases}} <br>Powerstats</h3>
+      <p>Has a strength of {{hero.powerstats.strength}}</p>
+      <p>An intelligence of {{hero.powerstats.intelligence}}</p>
+      <p>Can move at a speed of {{hero.powerstats.speed}}</p>
+      <p>Combatt abilities of {{hero.powerstats.combat}}</p> <br>
+      <h3>Biography</h3>
+      <p>Was born in {{hero.biography.placeOfBirth}}</p>
+      <p>First appearance was in {{hero.biography.firstAppearance}}</p><br>
+      <h3>Connections</h3>
+      <p>Known relatives are {{hero.connections.relatives}}</p>
+      <p>Group affliation he has worked with {{hero.connections.groupAffiliation}}</p>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+{%endfor%}
+
 {%endblock%}

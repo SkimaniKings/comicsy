@@ -55,10 +55,14 @@ def login():
 @app.route("/articles", methods=['GET', 'POST'])  
 def articles():
   
-    return render_template('articles.html', title='Profile' )
+    return render_template('articles.html' )
 
 @app.route("/contacts", methods=['GET', 'POST'])  
 def contacts():
   
-    return render_template('contacts.html', title='Profile' )
-     
+    return render_template('contacts.html' )
+@app.route("/about", methods=['GET', 'POST'])  
+def about():
+  
+    return render_template('about.html' )
+      
