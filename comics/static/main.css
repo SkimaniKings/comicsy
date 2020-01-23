@@ -16,3 +16,10 @@ nav a {
 nav a:hover {
   color: #fff;
 }
+
+.para1{
+  background-image: url("https://bit.ly/2uoNyCP");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
