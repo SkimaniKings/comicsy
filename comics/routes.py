@@ -1,7 +1,8 @@
-from flask import render_template, url_for, flash, redirect
-from comics import app, bcrypt, db
+from flask import render_template, url_for, flash, redirect, request
+from comics import app, db, bcrypt
 from comics.forms import RegistrationForm
-from comics.models import User
+from comics.models import User, Post
+
 
 
 
@@ -9,9 +10,9 @@ from comics.models import User
 @app.route('/home')
 def home():
     return render_template('home.html')
-     heroes = requests.get_superhero()
+    heroes = requests.get_superhero()
      
-     return render_template('home.html',heroes=heroes)
+    return render_template('home.html',heroes=heroes)
 
 
 
@@ -29,3 +30,4 @@ def register():
         flash('Your account has been created! You are now able to log in', 'success')
         return redirect(url_for('login'))
     return render_template('register.html', title='Register', form=form)
+
