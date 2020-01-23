@@ -1,6 +1,6 @@
 from flask import render_template, url_for, flash, redirect, request
 from comics import app
-from comics.forms import LoginForm
+from comics.forms import LoginForm,RegistrationForm
 from comics import requests
 
 
@@ -24,4 +24,13 @@ def login():
             flash('Login Unsuccessful. Please check username and password', 'danger')
     return render_template('login.html', title='Login', form=form)
 
-
+@app.route("/register", methods=['GET', 'POST'])
+def register():
+    form = RegistrationForm()
+    if form.validate_on_submit():
+      
+            return redirect(url_for('home'))
+    else:
+            flash('Login Unsuccessful. Please check username and password', 'danger')
+    return render_template('register.html', title='Login', form=form)
+   
