@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 #team {
     background: #eee !important;
@@ -125,3 +126,23 @@ section .section-title {
     height: 120px;
     border-radius: 50%;
 }
+=======
+body {
+    /* background:linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(http://www.cheatsheet.com/wp-content/uploads/2015/11/Justice-League.jpg) no-repeat center center/cover;
+    height:100vh; */
+}
+nav {
+  background: purple;
+}
+
+nav a {
+  color: #faff70;
+}
+#heada {
+  color: purple;
+}
+
+nav a:hover {
+  color: #fff;
+}
+>>>>>>> 721e37b50eb784f2084c29dbc972c89a8e92ae8c
