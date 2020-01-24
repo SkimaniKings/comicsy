@@ -11,8 +11,13 @@ from comics import requests
 
 @app.route('/home')
 def home():
-     heroes = requests.get_superhero()
-     return render_template('home.html',heroes=heroes)
+    heroes = requests.get_superhero()
+    return render_template('home.html',heroes=heroes)
+
+@app.route('/')
+@app.route('/about')
+def about():
+    return render_template('about.html')
  
 @app.route('/index')
 @app.route('/')
@@ -60,15 +65,11 @@ def login():
 
 @app.route("/articles", methods=['GET', 'POST'])  
 def articles():
-  
-    return render_template('articles.html' )
+  return render_template('articles.html' )
 
 @app.route("/contacts", methods=['GET', 'POST'])  
 def contacts():
+  return render_template('contacts.html' )
+
   
-    return render_template('contacts.html' )
-@app.route("/about", methods=['GET', 'POST'])  
-def about():
-  
-    return render_template('about.html' )
-      
+     

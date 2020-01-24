@@ -4,7 +4,6 @@ from wtforms.validators import DataRequired, Length, Email, EqualTo, ValidationE
 from comics.models import User
 
 
-
 class LoginForm(FlaskForm):
     
     email = StringField ('Email', validators = [DataRequired(), Email()])
