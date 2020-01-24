@@ -17,15 +17,11 @@ nav a {
 nav a:hover {
   color: #fff;
 }
-.para {
-  line-height: 2.3;
 
-}
-.text-bold {
-  font-family: 'Nosifer', cursive;
-  color:white;
-}
-.simony {
-  color:white;
 
+.para1{
+  background-image: url("https://bit.ly/2uoNyCP");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
 }

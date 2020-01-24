@@ -1,3 +1,4 @@
+
 from comics import db,login_manager
 from flask_login import UserMixin
 from datetime import datetime
@@ -26,3 +27,4 @@ class Superhero:
         self.powerstats = powerstats
         self.connections=connections
         
+

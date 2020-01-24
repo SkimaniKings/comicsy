@@ -41,6 +41,7 @@ def logout():
     logout_user()
     return redirect(url_for('home'))
 
+
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if current_user.is_authenticated:
@@ -70,5 +71,6 @@ def contacts():
 @app.route("/about", methods=['GET', 'POST'])  
 def about():
   
-    return render_template('about.html' )
-      
+
+    return render_template('profile.html', title='Profile' ,form=form)
+     
