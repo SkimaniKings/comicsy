@@ -44,14 +44,7 @@
                                 <a href="/contacts" class="nav-item nav-link">Contact Us</a>
 
                             </div>
-                            <!-- <form class="form-inline">
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Search">
-                        <div class="input-group-append">
-                            <button type="button" class="btn btn-secondary"><i class="fa fa-search"></i></button>
-                        </div>
-                    </div>
-                </form> -->
+                           
                             <div class="navbar-nav">
                                 {% if current_user.is_authenticated %}
                                 <div class="nav-item dropdown">
@@ -78,25 +71,7 @@
         </div>
         <div class="row">
             <div class="col">
-                <!-- <main role="main" class="container">
-                <div class="row">
-                    <div class="col-md-8">
-                        {% with messages = get_flashed_messages(with_categories=true)%}
-
-                        {% if messages%}
-                        {% for category, message in messages %}
-                        <div class="alert alert-{{ category }}">
-                            {{message}}
-                        </div>
-                        {% endfor %}
-                        {% endif %}
-                        {% endwith %}
-
-                    </div>
-
-                </div>
-            </main> -->
-
+             
 
                 {%block content %} {%endblock%}
                 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
