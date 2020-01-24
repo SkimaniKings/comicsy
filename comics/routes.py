@@ -8,7 +8,7 @@ from comics.forms import RegistrationForm, LoginForm
 from flask_login import login_user,current_user,logout_user,login_required
 from comics import requests
 
-@app.route('/')
+
 @app.route('/home')
 def home():
     heroes = requests.get_superhero()
@@ -18,6 +18,12 @@ def home():
 @app.route('/about')
 def about():
     return render_template('about.html')
+ 
+@app.route('/index')
+@app.route('/')
+def index():
+    
+     return render_template('index.html')
  
 @app.route('/register', methods=['GET', 'POST'])
 def register():
@@ -57,17 +63,13 @@ def login():
     
     return render_template('login.html', form=form)
 
-@app.route("/profile", methods=['GET', 'POST'])  
-def profile():
-    form = UpdateForm()
-    if form.validate_on_submit():
-   
-        current_user.username= form.username.data
-        current_user.email= form.email.data
-        db.session.commit()
-        flash("Your account has been updated!",'success')
-        return redirect(url_for('profile'))
- 
+@app.route("/articles", methods=['GET', 'POST'])  
+def articles():
+  return render_template('articles.html' )
+
+@app.route("/contacts", methods=['GET', 'POST'])  
+def contacts():
+  return render_template('contacts.html' )
+
   
-    return render_template('profile.html', title='Profile' ,form=form)
      
