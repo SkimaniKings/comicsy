@@ -1,6 +1,7 @@
 body {
-    /* background:linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(http://www.cheatsheet.com/wp-content/uploads/2015/11/Justice-League.jpg) no-repeat center center/cover;
-    height:100vh; */
+    /* background:linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(https://cdn.wallpapersafari.com/99/44/Pv2qmk.jpg) no-repeat center center/cover; */
+    height:100vh;
+    background-color: gray;
 }
 nav {
   background: purple;
@@ -22,4 +23,12 @@ nav a:hover {
 }
 .text-bold {
   font-family: 'Nosifer', cursive;
+  color:white;
+}
+.simony {
+  color:white;
+
+}
+.indexing {
+  height: 70vh;
 }
