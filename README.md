@@ -10,7 +10,7 @@
 
 - This is the Project Screenshot of the Home page
 
-  ![comicsy](comics/static/images/Screenshot.png)
+  <!-- ![comicsy](comics/static/images/Screenshot.png) -->
 
 ## Live-Link
 

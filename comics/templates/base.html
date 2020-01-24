@@ -26,59 +26,49 @@
 </head>
 
 <body>
-    <div class="container-fluid">
         <div class="row">
-            <div class="col">
-                <div class="bs-example">
-                    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-                        <a href="/index" class="navbar-brand">Comicsy</a>
-                        <button type="button" class="navbar-toggler" data-toggle="collapse"
-                            data-target="#navbarCollapse">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-
-    <header class="site-header">
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-            <div class="container">
-                <a class="navbar-brand mr-4" href="/">Comicsy</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle"
-                    aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarToggle">
-                    <div class="navbar-nav mr-auto">
-                        <a class="nav-item nav-link" href="/">Home</a>
-                        <a class="nav-item nav-link" href="about">About</a>
-                    </div>
-                    <!-- Navbar Right Side -->
-                    <div class="navbar-nav">
-
-                            </div>
-                           
-                            <div class="navbar-nav">
-                                {% if current_user.is_authenticated %}
-                                <div class="nav-item dropdown">
-                                    <a href="/articles" class="nav-link dropdown-toggle" data-toggle="dropdown">Popular
-                                        Articles</a>
-                                    <div class="dropdown-menu">
-                                        <a href="/articles" class="dropdown-item">Krypton</a>
-                                        <a href="#" class="dropdown-item">Sent</a>
-                                        <a href="#" class="dropdown-item">Drafts</a>
-                                    </div>
+                <div class="col">
+                    <div class="bs-example">
+                        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+                            <a href="/index" class="navbar-brand">Comicsy</a>
+                            <button type="button" class="navbar-toggler" data-toggle="collapse"
+                                data-target="#navbarCollapse">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+    
+                            <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                                <div class="navbar-nav">
+                                    <a href="/home" class="nav-item nav-link active">Home</a>
+                                    <a href="/about" class="nav-item nav-link">About</a>
+                                    <a href="/contacts" class="nav-item nav-link">Contact Us</a>
+    
                                 </div>
-                                <a href="/logout" class="nav-item nav-link">logout</a>
-                                {%else%}
-                                <a href="/register" class="nav-item nav-link">Register</a>
-                                <a href="login" class="nav-item nav-link">log in</a>
-
-                                {%endif%}
-
+    
+                                <div class="navbar-nav">
+                                    {% if current_user.is_authenticated %}
+                                    <div class="nav-item dropdown">
+                                        <a href="/articles" class="nav-link dropdown-toggle" data-toggle="dropdown">Popular
+                                            Articles</a>
+                                        <div class="dropdown-menu">
+                                            <a href="/articles" class="dropdown-item">Krypton</a>
+                                            <a href="#" class="dropdown-item">Sent</a>
+                                            <a href="#" class="dropdown-item">Drafts</a>
+                                        </div>
+                                    </div>
+                                    <a href="/logout" class="nav-item nav-link">logout</a>
+                                    {%else%}
+                                    <a href="/register" class="nav-item nav-link">Register</a>
+                                    <a href="login" class="nav-item nav-link">log in</a>
+    
+                                    {%endif%}
+    
+                                </div>
                             </div>
-                        </div>
-                    </nav>
+                        </nav>
+                    </div>
                 </div>
             </div>
-        </div>
+ 
         <div class="row">
             <div class="col">
              
