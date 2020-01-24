@@ -15,6 +15,7 @@ def home():
      return render_template('home.html',heroes=heroes)
  
 @app.route('/index')
+@app.route('/')
 def index():
     
      return render_template('index.html')
