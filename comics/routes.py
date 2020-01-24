@@ -8,11 +8,7 @@ from comics.forms import RegistrationForm, LoginForm
 from flask_login import login_user,current_user,logout_user,login_required
 from comics import requests
 
-@app.route('/')
-@app.route('/index')
-def index():
-     heroes = requests.get_superhero()
-     return render_template('index.html',heroes=heroes)
+
  
 @app.route('/home')
 def home():
