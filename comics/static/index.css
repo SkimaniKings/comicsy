@@ -1,9 +1,44 @@
 .images {
-    height:85vh;
+    height:80vh;
     width: 100vw;
 }
 .indexing {
     font-family: 'Permanent Marker', cursive;
     font-size:3rem;
     text-align:center;
+}
+h5 {
+    color:white;
+    font-size:2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/* .abdi {
+    z-index: 6;
+
+} */
+.opacity {
+    background-color:black;
+    height: 86vh;
+    width:100vw;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity:0.5;
+} 
+.sbs{
+    text-align: center;
+
+}
+
+.top {
+    position: relative;
+    z-index: -1;
+}
+
+nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
 }
